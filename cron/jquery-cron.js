@@ -306,7 +306,7 @@
             }
 
             block["period"] = $("<span class='cron-period'>"
-                    + "Every <select name='cron-period'>" + custom_periods
+                    + "Every <select name='cron-period' class='" + options.classes + "'>" + custom_periods
                     + str_opt_period + "</select> </span>")
                 .appendTo(this)
                 .data("root", this);
@@ -317,7 +317,7 @@
             if (o.useGentleSelect) select.gentleSelect(eo);
 
             block["dom"] = $("<span class='cron-block cron-block-dom'>"
-                    + " on the <select name='cron-dom'>" + str_opt_dom
+                    + " on the <select name='cron-dom' class='" + options.classes + "'>" + str_opt_dom
                     + "</select> </span>")
                 .appendTo(this)
                 .data("root", this);
@@ -326,7 +326,7 @@
             if (o.useGentleSelect) select.gentleSelect(o.domOpts);
 
             block["month"] = $("<span class='cron-block cron-block-month'>"
-                    + " of <select name='cron-month'>" + str_opt_month
+                    + " of <select name='cron-month' class='" + options.classes + "'>" + str_opt_month
                     + "</select> </span>")
                 .appendTo(this)
                 .data("root", this);
@@ -335,7 +335,7 @@
             if (o.useGentleSelect) select.gentleSelect(o.monthOpts);
 
             block["mins"] = $("<span class='cron-block cron-block-mins'>"
-                    + " at <select name='cron-mins'>" + str_opt_mih
+                    + " at <select name='cron-mins' class='" + options.classes + "'>" + str_opt_mih
                     + "</select> minutes past the hour </span>")
                 .appendTo(this)
                 .data("root", this);
@@ -344,7 +344,7 @@
             if (o.useGentleSelect) select.gentleSelect(o.minuteOpts);
 
             block["dow"] = $("<span class='cron-block cron-block-dow'>"
-                    + " on <select name='cron-dow'>" + str_opt_dow
+                    + " on <select name='cron-dow' class='" + options.classes + "'>" + str_opt_dow
                     + "</select> </span>")
                 .appendTo(this)
                 .data("root", this);
@@ -353,8 +353,8 @@
             if (o.useGentleSelect) select.gentleSelect(o.dowOpts);
 
             block["time"] = $("<span class='cron-block cron-block-time'>"
-                    + " at <select name='cron-time-hour' class='cron-time-hour'>" + str_opt_hid
-                    + "</select>:<select name='cron-time-min' class='cron-time-min'>" + str_opt_mih
+                    + " at <select name='cron-time-hour' class='cron-time-hour " + options.classes + "'>" + str_opt_hid
+                    + "</select>:<select name='cron-time-min' class='cron-time-min " + options.classes + "'>" + str_opt_mih
                     + " </span>")
                 .appendTo(this)
                 .data("root", this);
